@@ -24,7 +24,7 @@ COPY aircast.xml /etc/aircast.xml
 COPY --from=builder /root/AirConnect/bin/aircast-linux-x86_64 /usr/bin/aircast
 COPY --from=builder /root/AirConnect/bin/airupnp-linux-x86_64 /usr/bin/airupnp
 
-CMD ["aircast", "-x", "/etc/aircast.xml"]
+CMD ["aircast", "-Z", "-x", "/etc/aircast.xml"]
 
 # docker build --tag 'adilinden/aircast' .
 # docker run -it --rm adilinden/aircast
